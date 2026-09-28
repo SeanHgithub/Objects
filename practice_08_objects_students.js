@@ -34,7 +34,18 @@ const movie = {
   rating: "PG-13",
   runtime: 169,
 };
-
+/* console.log(Object.entries(movie)); */
+/* console.log(movie.title)
+console.log(movie.director) */
+/* function runtime() {
+  if (movie.runtime >= 120) {
+  return true
+} else {
+  return false
+}
+}
+console.log(runtime()); */
+/* const watched = true */
 // TODO 1: Print the movie title
 // console.log(...)
 
