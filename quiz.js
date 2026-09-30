@@ -1,12 +1,13 @@
 function Foodlines(m) {
-    Lines = [1,2,3,4,5]
-    Output = []
-    for (i=1; i<=m; i++) {
-        x= Math.min(Lines);
+    const Lines = [2,2,3,3,3];
+    let Output = [];
+    for (let i=1; i<=m; i++) {
+        let  x= Math.min(...Lines);
         Output.push(x);
-        Lines.pop(x);
-        console.log(x);
+        let y = Lines.indexOf(x);
+        Lines[y] = 101;
     }
-    return Output
+    return Output;
 }
-console.log(Foodlines(2));
+
+Foodlines(5).forEach((x) => console.log(x));
