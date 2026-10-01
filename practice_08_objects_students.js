@@ -108,7 +108,7 @@ console.log(runtime()); */
 //   findByName(students, "ChenZee") → { name: "ChenZee", grade: 12, gpa: 3.5, isHonors: false }
 //   findByName(students, "Marcus")  → null
 
-f/* unction findByName(students, targetName) {
+/* unction findByName(students, targetName) {
   return students.find(x => x.name === targetName) || null
 }
 
@@ -131,14 +131,17 @@ f/* unction findByName(students, targetName) {
 // The ★ appears only if isHonors is true.
 // Try solving without the honors first THEN try the star
 
-function printRoster(students) {
-  // TODO: loop through students with .forEach()
-  // TODO: print each student in the format above
+/* function printRoster(students) {
+  students.forEach(function(student) {
+    let star = "";
+    if (student.isHonors === true) {
+      star = "★";
+    }
+    console.log(`[Grade ${student.grade}] ${student.name} -- GPA: ${student.gpa} ${star}`)
+  })
 }
-
+printRoster(students) */
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 4 ---");
-// printRoster(students);
 
 // =================================================================
 // PROBLEM 5 — Object Inspector
@@ -163,14 +166,17 @@ const student = {
 };
 
 function inspectObject(obj) {
-  // TODO: use Object.entries() and .forEach() with destructuring
+  return Object.entries(obj).forEach(([key, value]) => {
+    console.log(`${key} -> ${value}`);
+  });
+
 }
 
 // Test your function — uncomment when ready:
 // console.log("\n--- Problem 5: student ---");
-// inspectObject(student);
+inspectObject(student);
 // console.log("\n--- Problem 5: movie ---");
-// inspectObject(movie);
+inspectObject(movie);
 
 // =================================================================
 // PROBLEM 6 — Sum the Values
@@ -185,6 +191,7 @@ function inspectObject(obj) {
 //   sumValues({ math: 92, english: 85, history: 78, name: "Alex" }) → 255
 
 function sumValues(obj) {
+  use .filter for typeofvalue==="number"
   // TODO: get the values with Object.values()
   // TODO: loop through them, add only numbers to a total
   // TODO: return the total
