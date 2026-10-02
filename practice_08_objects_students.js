@@ -164,7 +164,7 @@ const student = {
   gpa: 3.8,
   isHonors: true,
 };
-
+/* 
 function inspectObject(obj) {
   return Object.entries(obj).forEach(([key, value]) => {
     console.log(`${key} -> ${value}`);
@@ -176,7 +176,7 @@ function inspectObject(obj) {
 // console.log("\n--- Problem 5: student ---");
 inspectObject(student);
 // console.log("\n--- Problem 5: movie ---");
-inspectObject(movie);
+inspectObject(movie); */
 
 // =================================================================
 // PROBLEM 6 — Sum the Values
@@ -191,17 +191,21 @@ inspectObject(movie);
 //   sumValues({ math: 92, english: 85, history: 78, name: "Alex" }) → 255
 
 function sumValues(obj) {
-  use .filter for typeofvalue==="number"
-  // TODO: get the values with Object.values()
-  // TODO: loop through them, add only numbers to a total
-  // TODO: return the total
+  let sum = 0
+  Object.values(obj).forEach(function() {
+    if (typeof value === "number") {
+      sum += value
+    }
+    
+  });
+  return sum
 }
 
 // Test your function — uncomment when ready:
-// console.log("\n--- Problem 6 ---");
-// const scores = { math: 92, english: 85, history: 78, name: "Alex" };
-// console.log(sumValues(scores));  // → 255
-// console.log(sumValues(student)); // → 11 + 3.8 = 14.8  (skips strings and booleans)
+ console.log("\n--- Problem 6 ---");
+ const scores = { math: 92, english: 85, history: 78, name: "Alex" };
+ console.log(sumValues(scores));  // → 255
+ console.log(sumValues(student)); // → 11 + 3.8 = 14.8  (skips strings and booleans)
 
 // =================================================================
 // STRETCH — Push a New Student
