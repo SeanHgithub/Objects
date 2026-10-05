@@ -191,8 +191,8 @@ inspectObject(movie); */
 //   sumValues({ math: 92, english: 85, history: 78, name: "Alex" }) → 255
 
 function sumValues(obj) {
-  let sum = 0
-  Object.values(obj).forEach(function() {
+  let sum = 0;
+  Object.values(obj).forEach(function(value) {
     if (typeof value === "number") {
       sum += value
     }

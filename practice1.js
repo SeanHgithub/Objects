@@ -1,16 +1,14 @@
-function elderwand(start, N, wizards) {
+function elderwand(start, N, duels) {
+    let owner = start;
+    let times = 1;
     for(i=0; i<=N - 1; i++) {
-        let finalmaster = wizards[i][0];
-        return finalmaster
-        };
-    let masters = [];    
-    for(i=0; i<=N-1; i++) {
-        if (masters.includes(wizards[i][0])) {
-            masters.push(wizards[i][0])
-        } 
+        if (duels[i][1] === owner) {
+            owner = duels[i][0]
+            times +=1
+        }
     }
-    return masters.length
-    console.log()
+    console.log(owner);
+    console.log(times);
 }
 
-elderwand("A", 4, [[AB],[CB],[DC],[ED]]);
+elderwand("B", 4, ["AB","CB","DC","ED"]);
